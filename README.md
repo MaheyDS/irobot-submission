@@ -39,4 +39,4 @@ I have seperated API_KEY, and other configuration files just to make sure we can
 
 ## Sample Runs
 ![Alt text](~/sample-runs/Run_1.jpg?raw=true "SampleRun_Part1")
-![Alt text](~/sample-runs/Run2.jpg?raw=true "SampleRun_Part2")
+![Alt text](~/sample-runs/Run_2.jpg?raw=true "SampleRun_Part2")
