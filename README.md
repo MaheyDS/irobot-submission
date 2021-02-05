@@ -34,6 +34,8 @@ Please find below the Shopping List to buy this item:
     }
 ]
 ```
+## Security Approach
+I have seperated API_KEY, and other configuration files just to make sure we can apply some encryption to the .env file or input the value during run-time in Pipeline
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

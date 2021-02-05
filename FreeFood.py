@@ -18,7 +18,7 @@ class FreeFood(object):
         :return: None
         """
         config = ConfigParser()
-        config.read('config.properties')
+        config.read('./config/config.properties')
         self.API_KEY_NAME = config.get('PRD','API_KEY_NAME')
         self.BASE_END_POINT = config.get('PRD','BASE_END_POINT')
         self.RECIPE_SUMMARY_END_POINT = config.get('PRD','RECIPE_SUMMARY_END_POINT')
@@ -125,13 +125,25 @@ class FreeFood(object):
                 
                 # Price dictionary consists of pricing for every ingredient in the recipe
                 price_dictionary = self.process_price_response(self.get_ingredient_price(recipe["id"]))
+                
+                # Add Meta prefixes, and check
                 for missedIngrd in recipe['missedIngredients']:
+                    # Check if ingredient is available in Price Dictionary
+                    if missedIngrd['name'] in price_dictionary:
+                        ingredient_price = price_dictionary[missedIngrd['name']]
+                    else:
+                        # Now check appending Meta Tags
+                        for metaTag in missedIngrd["meta"]:
+                            if metaTag+" "+missedIngrd['name'] in price_dictionary:
+                                ingredient_price = price_dictionary[metaTag+" "+missedIngrd['name']]
+                        
+                    
                     self.user_shopping_dict.append(
                         {
                             'ingredientName': missedIngrd['name'],
                             'aisleName': missedIngrd['aisle'],
                             'quantity': missedIngrd['amount'],
-                            'estimatedCost': price_dictionary[missedIngrd['name']]
+                            'estimatedCost': ingredient_price
                         }
                     )
                 break
