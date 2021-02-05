@@ -1,4 +1,4 @@
-# Foobar
+# iRobot-submission
 
 Python based application for using spoonacular food-API
 
