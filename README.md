@@ -12,7 +12,7 @@ pip install configparser
 ```
 
 ## Usage
-Rename file sample.env to .env file, and enter your spoonacular API_KEY 
+**Rename sample.env to .env file**, and enter your spoonacular API_KEY 
 API_KEY=''
 
 ```python
