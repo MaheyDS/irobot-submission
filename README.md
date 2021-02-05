@@ -38,5 +38,5 @@ Please find below the Shopping List to buy this item:
 I have seperated API_KEY, and other configuration files just to make sure we can apply some encryption to the .env file or input the value during run-time in Pipeline
 
 ## Sample Runs
-![Alt text](/c/Users/lenovo/Desktop/irobot-submission/sample-runs/Run_1.jpg?raw=true "SampleRun_Part1")
-![Alt text](/c/Users/lenovo/Desktop/irobot-submission/sample-runs/Run2.jpg?raw=true "SampleRun_Part2")
+![Alt text](./sample-runs/Run_1.jpg?raw=true "SampleRun_Part1")
+![Alt text](./sample-runs/Run2.jpg?raw=true "SampleRun_Part2")
