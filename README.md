@@ -1,2 +1,39 @@
-# irobot-submission
-Python exhibit for consuming spoonacular food API
+# Foobar
+
+Python based application for using spoonacular food-API
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install following packages.
+
+```bash
+pip install requests
+pip install configparser
+```
+
+## Usage
+Rename file sample.env to .env file, and enter your spoonacular API_KEY 
+API_KEY=''
+
+```python
+python FreeFood.py
+Enter comma seperated list of ingredients ex. apple,banana: apple
+Do you like this recipe??, please enter yes or no: yes
+Please find below the Shopping List to buy this item:
+[
+    {
+        'aisleName': 'Spices and Seasonings',
+        'estimatedCost': 43.3,
+        'ingredientName': 'apple pie spice',
+        'quantity': 2.0
+    },
+    {   'aisleName': 'Canned and Jarred',
+        'estimatedCost': 37.22,
+        'ingredientName': 'unsweetened applesauce',
+        'quantity': 0.5
+    }
+]
+```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
